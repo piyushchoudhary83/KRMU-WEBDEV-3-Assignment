@@ -1,0 +1,116 @@
+{
+  "info": {
+    "_postman_id": "2d2b9d40-5e3d-4f10-9c39-student-api",
+    "name": "Student Management System API",
+    "description": "CRUD API collection for the Node.js + Express Student Management System.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/students"
+      }
+    },
+    {
+      "name": "Get Student By ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/students/1"
+      }
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Neha\",\n  \"course\": \"BCA\"\n}"
+        },
+        "url": "{{baseUrl}}/students"
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rahul Sharma\",\n  \"course\": \"MCA\"\n}"
+        },
+        "url": "{{baseUrl}}/students/1"
+      }
+    },
+    {
+      "name": "Patch Student",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course\": \"MCA\"\n}"
+        },
+        "url": "{{baseUrl}}/students/1"
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/students/1"
+      }
+    },
+    {
+      "name": "Invalid Student ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/students/abc"
+      }
+    },
+    {
+      "name": "Student Not Found",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/students/9999"
+      }
+    },
+    {
+      "name": "Invalid Route",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/does-not-exist"
+      }
+    }
+  ]
+}

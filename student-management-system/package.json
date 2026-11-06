@@ -1,0 +1,16 @@
+{
+  "name": "student-management-system-rest-api",
+  "version": "1.0.0",
+  "description": "Student Management System REST API using Node.js and Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nodejs", "express", "rest-api", "crud", "student-management"],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
